@@ -17,6 +17,7 @@ class Employee extends People {
     @Override
     void displayInfo() {
         super.displayInfo();
-        System.out.println("Salary = " + (salary * hoursWorked));
+        System.out.println(company);
+        System.out.print("Salary = " + (salary * hoursWorked));
     }
 }
