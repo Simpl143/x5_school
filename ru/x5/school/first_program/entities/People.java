@@ -1,6 +1,8 @@
-package ru.x5.school.first_program;
+package ru.x5.school.first_program.entities;
 
 public class People {
+
+    public String name;
 
     private final String firstName;
     private final String lastName;
@@ -13,7 +15,7 @@ public class People {
         this.age = age;
     }
 
-    void displayInfo(){
+    public void displayInfo(){
         System.out.println(firstName + " " + lastName + " " + age);
     }
 }

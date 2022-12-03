@@ -1,21 +1,23 @@
-package ru.x5.school.first_program;
+package ru.x5.school.first_program.entities;
 
-class Employee extends People {
+public class Employee extends People {
 
+        private final int id;
         private final String company;
         private final int salary;
         private final int hoursWorked;
 
-    public Employee(String firstName, String lastName, int age, String company, int salary, int hoursWorked){
+    public Employee(String firstName, String lastName, int age, int id, String company, int salary, int hoursWorked){
 
         super(firstName, lastName, age);
+        this.id = id;
         this.company = company;
         this.salary = salary;
         this.hoursWorked = hoursWorked;
     }
 
     @Override
-    void displayInfo() {
+    public void displayInfo() {
         super.displayInfo();
         System.out.println(company);
         System.out.println("Salary = " + (salary * hoursWorked));
