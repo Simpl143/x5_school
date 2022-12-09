@@ -6,6 +6,7 @@ import ru.x5.school.first_program.repositories.Storage;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class LocalStorage implements Storage {
 
@@ -13,18 +14,18 @@ public class LocalStorage implements Storage {
 
 
     @Override
-    public String save(Employee target) {
-        return null;
+    public Employee save(Employee target) {
+        return storage.put(target.getId(), target);
     }
 
     @Override
-    public List<String> saveAll(List<Employee> target) {
-        return null;
+    public void saveAll(List<Employee> target) {
+        target.forEach(this::save);
     }
 
     @Override
     public Employee getByld(String id) {
-        return null;
+        return storage.get(id);
     }
 
     @Override

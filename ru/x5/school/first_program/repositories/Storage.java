@@ -3,12 +3,13 @@ package ru.x5.school.first_program.repositories;
 import ru.x5.school.first_program.entities.Employee;
 
 import java.util.List;
+import java.util.Set;
 
 public interface Storage {
 
-    String save(Employee target);
+    Employee save(Employee target);
 
-    List<String> saveAll(List<Employee> target);
+    void saveAll(List<Employee> target);
 
     Employee getByld(String id);
 
